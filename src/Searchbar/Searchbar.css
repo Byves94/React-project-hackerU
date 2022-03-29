@@ -1,0 +1,24 @@
+.header-search {
+    background-color: #faf86f86;
+}
+
+.header-search > input{
+    width: 500px;
+    height: 30px;
+    text-align: left;
+}
+
+.search-submit > button{
+    width: 100px;
+    height: 32px;
+    margin-left: 3px;
+}
+
+.list-item {
+    border-bottom: 2px;
+    cursor: pointer;
+    background-color: #e4d1ca;
+    text-align: left;
+    font-size: 20px;
+    padding: 10px;
+}

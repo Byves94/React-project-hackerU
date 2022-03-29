@@ -1,0 +1,9 @@
+.result-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    width: 500px;
+    height: 30px;
+    left: 400px;
+}
