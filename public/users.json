@@ -1,0 +1,8 @@
+
+    {
+        "userName": "admin",
+        "password": "admin",
+        "Email": "Admin@gmail.com",
+        "profilePic": "Pic",
+        "admin": true
+    }

@@ -47,7 +47,6 @@ class SearchBar extends React.Component {
         let inputBox = document.querySelector('input');
         form = document.querySelector('form');
         let input = inputBox.value;
-        console.log(input);
         let actionPath;
         if (input == undefined)
             actionPath = "/Shop";
