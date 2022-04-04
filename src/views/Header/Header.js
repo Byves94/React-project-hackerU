@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import './header.css';
+import currentUser, { userOnline } from '../../Data/userInfo';
+import LoginInfo from './LoginInfo.js';
 
 
 function Header() {
@@ -9,9 +11,10 @@ function Header() {
                 <NavLink to="/" className="title">
                     B u y D u c k s
                 </NavLink>
-                <nav className="login">
-                    <NavLink to="/Login" >Login</NavLink> | <NavLink to="/">Register</NavLink>
-                </nav>
+                {userOnline() ? (<LoginInfo user={currentUser} />) :
+                    <nav className="login">
+                        <NavLink to="/Login" >Login</NavLink> | <NavLink to="/">Register</NavLink>
+                    </nav>}
                 <nav className="shopping">
                     <NavLink to="/Shop">Shop</NavLink> | <NavLink to="/">Cart</NavLink>
                 </nav>

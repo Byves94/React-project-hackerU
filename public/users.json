@@ -1,8 +1,16 @@
-
+[
     {
-        "userName": "admin",
+        "userName": "Max",
         "password": "admin",
         "Email": "Admin@gmail.com",
         "profilePic": "Pic",
         "admin": true
+    },
+    {
+        "userName": "Yves",
+        "password": "yves",
+        "Email": "yves@gmail.com",
+        "profilePic": "Pic",
+        "admin": false
     }
+]

@@ -1,6 +1,4 @@
-import { useState } from "react";
-import products from "../../Data/products"
-import { NavLink } from "react-router-dom";
+import products from "../../Data/products";
 import RandomItem from "./RandomItem";
 
 const Random3Item = () => {
