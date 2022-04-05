@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import currentUser from "../../Data/userInfo";
+import React from "react";
 import './login.css';
 
 
@@ -8,12 +7,11 @@ function Login() {
     let password = "";
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch("users.json", {
+        fetch("users/users.json", {
             method: "GET",
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
                 let user;
                 let trueLogin = false;
                 for (let i = 0; i < data.length; i++) {
@@ -23,11 +21,10 @@ function Login() {
                         break;
                     }
                 }
-                if (trueLogin){
+                if (trueLogin) {
                     alert("Success! You are logged in.");
-                    // currentUser = JSON.stringify(user);
-                    localStorage.setItem("user",JSON.stringify(user));
-                    window.open("/","_self");
+                    localStorage.setItem("user", JSON.stringify(user));
+                    window.open("/", "_self");
                 }
                 else
                     alert("Please check your login information");
@@ -41,10 +38,10 @@ function Login() {
 
             <div className="container">
                 <label ><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" className="login-username" onChange={(text) => { username = text.currentTarget.value; console.log(username) }} required />
+                <input type="text" placeholder="Enter Username" className="login-username" onChange={(text) => { username = text.currentTarget.value }} required />
 
                 <label ><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" className="login-pass" onChange={(text => { password = text.currentTarget.value; console.log(password) })} required />
+                <input type="password" placeholder="Enter Password" className="login-pass" onChange={(text => { password = text.currentTarget.value })} required />
 
                 <button type="submit">Login</button>
             </div>

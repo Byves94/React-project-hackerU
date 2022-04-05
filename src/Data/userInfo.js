@@ -1,12 +1,8 @@
-import { useState } from "react";
+let currentUser = localStorage.getItem('user');
 
-let currentUser = localStorage.getItem('user')
-
-export function userOnline() {
-    if (currentUser != null || currentUser != undefined)
-        return true;
-    else
-        return false;
+export function isUserOnline() {
+    return !(currentUser === null || currentUser === undefined);
 }
+
 
 export default currentUser;

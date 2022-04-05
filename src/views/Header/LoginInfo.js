@@ -3,17 +3,21 @@ import './LoginInfo.css'
 function LoginInfo(props) {
     let obj = JSON.parse(props.user)
     const logOut = () => {
-        localStorage.clear();
+        localStorage.removeItem('user');
         window.open("/","_self");
     }
 
     return (
+        <>
         <div className="login-info">
-            {obj.userName}
+            <img src={obj.profilePic} alt={obj.userName} className='pfp' height='50'/>
+            <div>{obj.userName}
             <br/>
             {obj.Email}
-            <button onClick={logOut}>LogOut</button>
+            </div>
         </div>
+        <button onClick={logOut} className='logout'>LogOut</button>
+        </>
     )
 }
 

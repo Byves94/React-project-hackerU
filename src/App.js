@@ -8,6 +8,7 @@ import Login from './views/Login/Login.js';
 import Shop from './views/Shop/Shop.js';
 import ProductInfo from './views/ProductInfo/ProductInfo.js';
 import SearchNotFound from './views/SearchNotFound/SearchNotFound.js';
+import Cart from './views/Cart/Cart.js';
 
 function App(props) {
   return (
@@ -18,7 +19,8 @@ function App(props) {
         <Route path='/Login' element={<Login />} />
         <Route path='/Shop' element={<Shop />} />
         <Route path='/Shop/:productName' element={<ProductInfo />} />
-        <Route path='SearchNotFound' element={<SearchNotFound/>}/>
+        <Route path='/Cart' element={<Cart />} />
+        <Route path='SearchNotFound' element={<SearchNotFound />} />
       </Routes>
       <Footer />
     </div>

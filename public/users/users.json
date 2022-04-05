@@ -3,14 +3,14 @@
         "userName": "Max",
         "password": "admin",
         "Email": "Admin@gmail.com",
-        "profilePic": "Pic",
+        "profilePic": "users/profilePics/admin-pfp.png",
         "admin": true
     },
     {
         "userName": "Yves",
         "password": "yves",
         "Email": "yves@gmail.com",
-        "profilePic": "Pic",
+        "profilePic": "users/profilePics/profile-duck.jpg",
         "admin": false
     }
 ]

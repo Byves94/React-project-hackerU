@@ -1,5 +1,5 @@
-import { Link, useParams } from "react-router-dom";
-const ProductShow = ({ image, name, description, price }) => {
+import { Link } from "react-router-dom";
+const ProductShow = ({ image, name, price }) => {
   return (
     <div className="product">
       <div className="image">
