@@ -1,10 +1,12 @@
 .Shop-body {
-    background-color: #faf86f86;
+    /* background-color: #faf86f86; */
+    text-align: center;
     min-height: 686px;
 }
 
 .Shop-title {
-    background-color: #faf86f86;
+    /* background-color: #faf86f86; */
     font-size: 100px;
     font-style: italic;
+    text-align: center;
 }

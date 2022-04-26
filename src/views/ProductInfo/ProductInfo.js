@@ -1,20 +1,32 @@
+import React from "react";
 import { useParams } from "react-router-dom";
-import products from "../../Data/products";
 import Button from '@mui/material/Button';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import './ProductInfo.css';
 import _cart from "../../Data/cart";
+import currentUser from "../../Data/userInfo";
 
-export default function ProductInfo() {
+function ProductInfo() {
     let { productName } = useParams();
     let currentObj = getCurrentObj(productName);
 
     const addToCart = () => {
-        _cart.push(currentObj);
-        localStorage.setItem('cart', JSON.stringify(_cart));
-        alert('Item added');
-        console.log(_cart)
+        let user = JSON.parse(currentUser);
+        let cartName = `${user.userName}'s cart`;
+        
+        if (currentUser !== null) {
+            let tempObj = getCurrentObj(productName);
+            tempObj.idCart = _cart.length;
+            _cart.push(tempObj);
+            console.log(_cart)
+            localStorage.setItem(cartName, JSON.stringify(_cart));
+            alert('Item added');
+        }
+        else {
+            alert('Need to sign in to add to cart');
+        }
     }
+
 
     return (
         <div className="product-info">
@@ -26,11 +38,13 @@ export default function ProductInfo() {
             <Button variant="contained" endIcon={<AddShoppingCartIcon />} color='secondary' size="large" onClick={addToCart}>Add to cart</Button>
             <div className="price">{currentObj.price}$</div>
         </div>
-    )
-}
+    );
+};
 
 const getCurrentObj = (name) => {
     let currentObj;
+    let _products = localStorage.getItem('products');
+    let products = JSON.parse(_products)
     for (let i = 0; i < products.length; i++) {
         if (products[i].name === name) {
             currentObj = products[i];
@@ -39,3 +53,5 @@ const getCurrentObj = (name) => {
     }
     return currentObj;
 }
+
+export default ProductInfo;

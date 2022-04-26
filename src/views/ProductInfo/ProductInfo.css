@@ -1,5 +1,6 @@
 .product-info {
     min-height: 836px;
+    text-align: center;
 }
 
 .product-info > .description {

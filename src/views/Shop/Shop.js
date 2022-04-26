@@ -1,3 +1,4 @@
+import React from 'react';
 import ProductList from "./ProductList.js";
 import SearchBar from "../../Searchbar/Searchbar";
 import "./Shop.css";

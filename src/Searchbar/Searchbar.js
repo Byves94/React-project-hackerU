@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
                 (filteredSuggestions) =>
                     filteredSuggestions.name.toLowerCase().trim().indexOf(userInput.toLowerCase()) > -1);
         }
-        if (userInput.length == 0) {
+        if (userInput.length === 0) {
             this.setState({
                 filteredSuggestions: filter,
                 showSuggestions: false,
@@ -48,11 +48,11 @@ class SearchBar extends React.Component {
         form = document.querySelector('form');
         let input = inputBox.value;
         let actionPath;
-        if (input == undefined)
+        if (input === undefined)
             actionPath = "/Shop";
         else {
             for (let i = 0; i < products.length; i++) {
-                if (input != products[i].name) {
+                if (input !== products[i].name) {
                     actionPath = "/SearchNotFound";
                 }
                 else {
@@ -85,7 +85,7 @@ class SearchBar extends React.Component {
                                 <div className='list-item'
                                     onClick={this.onClick}
                                     key={filteredSuggestions.name}>
-                                    <img src={filteredSuggestions.image} height="20" />
+                                    <img src={filteredSuggestions.image} alt='' height="20" />
                                     {filteredSuggestions.name}
                                 </div>)} />
                 </>

@@ -1,5 +1,6 @@
 .header-search {
-    background-color: #faf86f86;
+    /* background-color: #faf86f86; */
+    text-align: center;
 }
 
 .header-search > input{

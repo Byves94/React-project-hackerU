@@ -1,3 +1,4 @@
+import React from "react";
 import products from "../../Data/products";
 import RandomItem from "./RandomItem";
 

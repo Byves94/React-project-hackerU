@@ -1,0 +1,14 @@
+.Manage-carts {
+    min-height: 836px;
+}
+.Manage-carts > h1 {
+    font-size: 100px;
+    font-style: italic;
+    text-align: center;
+}
+.Manage-carts > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 40px;
+}

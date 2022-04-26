@@ -9,6 +9,11 @@ import Shop from './views/Shop/Shop.js';
 import ProductInfo from './views/ProductInfo/ProductInfo.js';
 import SearchNotFound from './views/SearchNotFound/SearchNotFound.js';
 import Cart from './views/Cart/Cart.js';
+import Sell from './views/Sell/Sell.js';
+import NotAnAdmin from './views/NotAnAdmin/NotAnAdmin.js';
+import { isUserAdmin } from './Data/userInfo.js';
+import ManageCarts from './views/ManageCarts/ManageCarts.js';
+import SpecifiCart from './views/ManageCarts/SpecifiCart.js';
 
 function App(props) {
   return (
@@ -20,7 +25,10 @@ function App(props) {
         <Route path='/Shop' element={<Shop />} />
         <Route path='/Shop/:productName' element={<ProductInfo />} />
         <Route path='/Cart' element={<Cart />} />
-        <Route path='SearchNotFound' element={<SearchNotFound />} />
+        <Route path='/SearchNotFound' element={<SearchNotFound />} />
+        <Route path="/Sell" element={isUserAdmin() ? <Sell/> : <NotAnAdmin/>}/>
+        <Route path="/ManageCarts" element={isUserAdmin() ? <ManageCarts/> : <NotAnAdmin/>}/>
+        <Route path="ManageCarts/:productName" element={isUserAdmin() ? <SpecifiCart/> : <NotAnAdmin/>}/>
       </Routes>
       <Footer />
     </div>

@@ -1,7 +1,8 @@
 .login-form {
     border: 3px solid #f1f1f1;
-    background-color: #faf86f86;
+    /* background-color: #faf86f86; */
     min-height: 830px;
+    text-align: center;
   }
 
 .login-username, .login-pass {

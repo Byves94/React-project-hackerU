@@ -1,6 +1,6 @@
 [
     {
-        "userName": "Max",
+        "userName": "Admin",
         "password": "admin",
         "Email": "Admin@gmail.com",
         "profilePic": "users/profilePics/admin-pfp.png",
@@ -11,6 +11,20 @@
         "password": "yves",
         "Email": "yves@gmail.com",
         "profilePic": "users/profilePics/profile-duck.jpg",
+        "admin": false
+    },
+    {
+        "userName": "Ron",
+        "password": "Ron",
+        "Email": "Ron@gmail.com",
+        "profilePic": "users/profilePics/RonPic.jpg",
+        "admin": false
+    },
+    {
+        "userName": "Raziel",
+        "password": "Raziel",
+        "Email": "Raziel@gmail.com",
+        "profilePic": "users/profilePics/RazielPic.jpg",
         "admin": false
     }
 ]

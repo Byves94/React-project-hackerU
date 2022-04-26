@@ -1,4 +1,6 @@
 import './LoginInfo.css'
+import React from 'react';
+
 
 function LoginInfo(props) {
     let obj = JSON.parse(props.user)

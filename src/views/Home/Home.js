@@ -1,3 +1,4 @@
+import React from 'react';
 import SearchBar from '../../Searchbar/Searchbar';
 import './home.css';
 import Random3Item from './Random3Item.js';

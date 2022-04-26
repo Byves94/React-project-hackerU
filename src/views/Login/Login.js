@@ -41,7 +41,7 @@ function Login() {
                 <input type="text" placeholder="Enter Username" className="login-username" onChange={(text) => { username = text.currentTarget.value }} required />
 
                 <label ><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" className="login-pass" onChange={(text => { password = text.currentTarget.value })} required />
+                <input type="password" placeholder="Enter Password" className="login-pass" onChange={(text) => { password = text.currentTarget.value }} required />
 
                 <button type="submit">Login</button>
             </div>
