@@ -1,10 +1,10 @@
 * {
-  /* text-align: center; */
   margin: 0;
 }
 
 .App {
   background-color: #faf86f86;
+  min-height:540px;
 }
 
 

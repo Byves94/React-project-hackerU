@@ -1,11 +1,40 @@
 .login-form {
+  border: 3px solid #f1f1f1;
+  text-align: center;
+}
+
+.login-username,
+.login-pass {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 20px 0;
+  display: block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container>button {
+  background-color: rgba(253, 194, 2, 0.87);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .login-form {
     border: 3px solid #f1f1f1;
     /* background-color: #faf86f86; */
     min-height: 830px;
     text-align: center;
   }
 
-.login-username, .login-pass {
+  .login-username,
+  .login-pass {
     width: 15%;
     padding: 12px 20px;
     margin: 20px 0;
@@ -16,12 +45,13 @@
     margin-right: auto;
     margin-left: auto;
   }
+
   .container {
-    position:relative;
+    position: relative;
     top: 100px;
   }
 
-  .container > button {
+  .container>button {
     background-color: rgba(253, 194, 2, 0.87);
     color: white;
     padding: 14px 20px;
@@ -29,4 +59,4 @@
     border: none;
     cursor: pointer;
   }
-  
+}

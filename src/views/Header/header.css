@@ -4,36 +4,65 @@
     padding: 5px;
     text-align: center;
     background-color: #7e5d51;
-    /* min-height: 100; */
-    /* display: ; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* color: rgb(252, 212, 81); */
 }
-  
-.App-header > .title:link,:visited {
+
+.App-header>.title:link,
+:visited {
     background-image: url("./manyducks.jpg");
     background-size: cover;
     text-decoration: underline;
-    font-size: 50px;
-    /* position: relative; */
-    /* left: 80px; */
+    font-size: 30px;
 }
 
-.App-header > .login {
+.App-header>.shopping {
     display: inline;
-    font-size: 30px;
-    position:fixed;
+    font-size: 25px;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+}
+
+.App-header>.login {
+    display: inline;
+    font-size: 20px;
+    position: fixed;
     left: 15px;
     top: 10px;
 }
 
-.App-header > .shopping {
-    display: inline;
-    font-size: 30px;
-    position:fixed;
-    right: 15px;
-    top: 10px;
-}
 
+@media only screen and (min-width: 768px) {
+    .App-header {
+        position: sticky;
+        top: 0;
+        padding: 5px;
+        text-align: center;
+        background-color: #7e5d51;
+    }
+
+    .App-header>.title:link,
+    :visited {
+        background-image: url("./manyducks.jpg");
+        background-size: cover;
+        text-decoration: underline;
+        font-size: 50px;
+        /* position: relative; */
+        /* left: 80px; */
+    }
+
+    .App-header>.login {
+        display: inline;
+        font-size: 30px;
+        position: fixed;
+        left: 15px;
+        top: 10px;
+    }
+
+    .App-header>.shopping {
+        display: inline;
+        font-size: 30px;
+        position: fixed;
+        right: 15px;
+        top: 10px;
+    }
+}

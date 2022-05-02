@@ -1,12 +1,43 @@
 .Shop-body {
     /* background-color: #faf86f86; */
     text-align: center;
-    min-height: 686px;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 100px;
 }
 
 .Shop-title {
-    /* background-color: #faf86f86; */
-    font-size: 100px;
+    font-size: 80px;
     font-style: italic;
     text-align: center;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .Shop-body {
+        /* background-color: #faf86f86; */
+        text-align: center;
+        height: 686px;
+    }
+
+    .Shop-title {
+        /* background-color: #faf86f86; */
+        font-size: 100px;
+        font-style: italic;
+        text-align: center;
+    }
+
+    .product-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 100px;
+    }
 }

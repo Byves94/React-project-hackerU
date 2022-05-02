@@ -15,7 +15,7 @@ import { isUserAdmin } from './Data/userInfo.js';
 import ManageCarts from './views/ManageCarts/ManageCarts.js';
 import SpecifiCart from './views/ManageCarts/SpecifiCart.js';
 
-function App(props) {
+function App() {
   return (
     <div className="App">
       <Header />
