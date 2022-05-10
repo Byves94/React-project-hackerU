@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 import { useState } from "react";
-import products from "../../Data/products";
 import "./Sell.css";
 
 function Sell() {

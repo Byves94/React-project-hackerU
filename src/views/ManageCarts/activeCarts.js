@@ -28,9 +28,6 @@ nameValues = JSON.parse(localStorage.getItem('tempNames'));
 for (let i = 0; i < activeCarts.length; i++) {
     activeCarts[i].Key = nameValues[i];
 }
-// localStorage.removeItem('allCarts');
-// localStorage.removeItem('tempNames');
-console.log(activeCarts);
 
 
 export default activeCarts;

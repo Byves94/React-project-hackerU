@@ -77,7 +77,7 @@ class SearchBar extends React.Component {
                             onChange={this.onChange}
                             value={this.userInput}
                         />
-                        <button type="submit" className="search-submit" onClick={this.onSubmit}>Search🐤</button>
+                        <button type="submit" className="search-submit" onClick={this.onSubmit}>Search<span role="img" aria-label="duck">🐤</span></button>
                     </form>
                     <ResultList
                         result={this.state.filteredSuggestions.map(
@@ -100,7 +100,7 @@ class SearchBar extends React.Component {
                         onChange={this.onChange}
                         value={this.userInput}
                     />
-                    <button type="submit" className="search-submit" onClick={this.onSubmit}>Search🐤</button>
+                    <button type="submit" className="search-submit" onClick={this.onSubmit}>Search<span role="img" aria-label="duck">🐤</span></button>
                 </form>
             )
         }
