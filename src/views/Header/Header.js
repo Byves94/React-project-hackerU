@@ -20,7 +20,7 @@ function Header() {
                 </NavLink>
                 {isUserOnline() ? (<LoginInfo user={currentUser} />) :
                     <nav className="login">
-                        <NavLink to="/Login" >Login</NavLink> | <NavLink to="/">Register</NavLink>
+                        <NavLink to="/Login" >Login</NavLink>
                     </nav>}
                 <nav className="shopping">
                     <NavLink to="/Shop">Shop</NavLink> |<NavLink to="/Cart" onClick={loginValidate}>Cart</NavLink>

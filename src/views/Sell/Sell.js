@@ -7,44 +7,28 @@ import "./Sell.css";
 function Sell() {
 
     const [selectedFile, setSelectedFile] = useState(null);
-
-    const fileChange = e => setSelectedFile(e.target.files[0]);
+    const [itemName, setItemName] = useState('');
+    const [itemDescription, setItemDescription] = useState('');
+    const [itemPrice, setItemPrice] = useState();
 
     const handleSubmission = (e) => {
         e.preventDefault();
-        let itemName = document.getElementById('name').value;
-        let itemDescription = document.getElementById('description').value;
-        let itemPrice = document.getElementById('price').value;
         console.log(itemDescription);
         console.log(itemName)
         console.log(itemPrice)
         console.log(selectedFile)
+
         const formData = new FormData();
+        formData.append('name', selectedFile.name);
+        formData.append('file', selectedFile,);
 
-        formData.append('file',
-            selectedFile,
-            selectedFile.name
-        );
         console.log(formData);
-        axios.post("/images", formData, {
-            headers: {
-              "Content-Type": selectedFile.type,
-            },
-          });
-
-        // fetch(
-        //     '/public/images',
-        //     {
-        //         method: 'GET',
-        //     }
-        // )
-        //     .then((response) => console.log(response))
-        //     .then((result) => {
-        //         console.log('Success:', result);
-        //     })
-        //     .catch((error) => {
-        //         console.error('Error:', error);
-        //     });
+        axios
+            .post('./images', formData)
+            .then((res) => {
+                alert("File Upload success");
+            })
+            .catch((err) => alert("File Upload Error"))
 
 
         //     let newObj = {
@@ -63,16 +47,16 @@ function Sell() {
         <h1>Sell</h1>
         <form onSubmit={handleSubmission}>
             <label htmlFor="name">Name:</label> <br />
-            <input type="text" id='name' required></input> <br />
+            <input type="text" id='name' onChange={e => setItemName(e.target.value)} required></input> <br />
 
             <label htmlFor="img">Image:</label> <br />
-            <input type="file" accept=".jpg,.png" id='file' onChange={fileChange}></input> <br />
+            <input type="file" accept=".jpg,.png" id='file' onChange={e => setSelectedFile(e.target.files[0])}></input> <br />
 
             <label htmlFor="description">Description:</label> <br />
-            <input type="text" id='description' required></input> <br />
+            <input type="text" id='description' onChange={e => setItemDescription(e.target.value)} required></input> <br />
 
             <label htmlFor="price">Price:</label> <br />
-            <input type="number" id='price' required></input> <br />
+            <input type="number" id='price' onChange={e => setItemPrice(e.target.value)} required></input> <br />
 
             <button type="submit">Add Item</button>
         </form>
