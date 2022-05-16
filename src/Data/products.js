@@ -58,7 +58,6 @@ let products = [
 ];
 
 localStorage.setItem("products",JSON.stringify(products));
-// let storage = localStorage.getItem("products");
 
 export default products;
 
