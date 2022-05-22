@@ -1,9 +1,16 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import { isUserAdmin } from "../../Data/userInfo";
+import { isUserOnline } from '../../Data/userInfo';
 import './footer.css';
 
 function Footer() {
+    const loginValidate = (e) => {
+        if (!isUserOnline()) {
+            e.preventDefault();
+            alert('Must login to enter cart');
+        }
+    }
     return (
         <footer>
             <div className="contant-info">
@@ -16,7 +23,7 @@ function Footer() {
             <nav className="footer-shop">    
                     <NavLink to="/Shop" className="footer-shop-title" >Shop:</NavLink> <br/>
                     <NavLink to="/Shop" >Buy</NavLink> <br/>
-                    <NavLink to="/Cart" >Cart</NavLink> 
+                    <NavLink to="/Cart" onClick={loginValidate}>Cart</NavLink> 
             </nav>
             <img src={require('./duck-background.png')} alt="white duck" className="img2"/>
             {isUserAdmin() ? 
