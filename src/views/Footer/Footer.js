@@ -30,7 +30,6 @@ function Footer() {
             <div className="admin">
                 <div className="admin-title">Admin:</div>
                 <nav>
-                    <NavLink to="/Sell">Sell</NavLink> <br/>
                     <NavLink to="/ManageCarts">Manage carts</NavLink>
                 </nav>
             </div> : <></>}
